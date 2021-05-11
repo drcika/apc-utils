@@ -5,36 +5,36 @@
   "projects": {
     "apc-utils": {
       "projectType": "library",
-      "root": "projects/apc-utils",
-      "sourceRoot": "projects/apc-utils/src",
+      "root": "projects/@apc-utils",
+      "sourceRoot": "projects/@apc-utils/src",
       "prefix": "apc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/apc-utils/tsconfig.lib.json",
-            "project": "projects/apc-utils/ng-package.json"
+            "tsConfig": "projects/@apc-utils/tsconfig.lib.json",
+            "project": "projects/@apc-utils/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/apc-utils/tsconfig.lib.prod.json"
+              "tsConfig": "projects/@apc-utils/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/apc-utils/src/test.ts",
-            "tsConfig": "projects/apc-utils/tsconfig.spec.json",
-            "karmaConfig": "projects/apc-utils/karma.conf.js"
+            "main": "projects/@apc-utils/src/test.ts",
+            "tsConfig": "projects/@apc-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/@apc-utils/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/apc-utils/tsconfig.lib.json",
-              "projects/apc-utils/tsconfig.spec.json"
+              "projects/@apc-utils/tsconfig.lib.json",
+              "projects/@apc-utils/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -44,5 +44,5 @@
       }
     }
   },
-  "defaultProject": "apc-utils"
+  "defaultProject": "@apc-utils"
 }
